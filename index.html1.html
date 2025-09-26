@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preneta Pricylla Permata Ibadani - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        .modal {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-purple-800">Preneta P.P.I</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors">Beranda</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">Tentang</a>
+                    <a href="#skills" class="text-gray-700 hover:text-purple-600 transition-colors">Keahlian</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-purple-600 transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Kontak</a>
+                    <button onclick="showLogin()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">Admin</button>
+                </div>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/90 backdrop-blur-md fixed w-full top-16 z-40 shadow-lg">
+        <div class="px-4 py-4 space-y-4">
+            <a href="#home" class="block text-gray-700 hover:text-purple-600">Beranda</a>
+            <a href="#about" class="block text-gray-700 hover:text-purple-600">Tentang</a>
+            <a href="#skills" class="block text-gray-700 hover:text-purple-600">Keahlian</a>
+            <a href="#portfolio" class="block text-gray-700 hover:text-purple-600">Portfolio</a>
+            <a href="#contact" class="block text-gray-700 hover:text-purple-600">Kontak</a>
+            <button onclick="showLogin()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">Admin</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="fade-in">
+                <div class="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-6xl text-white font-bold shadow-2xl">
+                    PP
+                </div>
+                <h1 id="heroName" class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">Preneta Pricylla Permata Ibadani</h1>
+                <p id="heroTitle" class="text-xl md:text-2xl text-gray-600 mb-8">Web Developer & UI/UX Designer</p>
+                <p id="heroDescription" class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">Passionate about creating beautiful and functional digital experiences that make a difference.</p>
+                <div class="space-x-4">
+                    <a href="#portfolio" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors inline-block">Lihat Portfolio</a>
+                    <a href="#contact" class="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors inline-block">Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Tentang Saya</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-full h-96 bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl flex items-center justify-center text-8xl text-purple-600 shadow-xl">
+                        👩‍💻
+                    </div>
+                </div>
+                <div>
+                    <h3 id="aboutTitle" class="text-2xl font-bold text-gray-800 mb-4">Hello, I'm Preneta!</h3>
+                    <p id="aboutDescription" class="text-gray-600 mb-6 leading-relaxed">
+                        Saya adalah seorang web developer dan UI/UX designer yang berpengalaman dalam menciptakan solusi digital yang inovatif. 
+                        Dengan passion yang tinggi terhadap teknologi dan desain, saya selalu berusaha memberikan hasil terbaik untuk setiap project.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Lokasi</h4>
+                            <p id="aboutLocation" class="text-gray-600">Indonesia</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Pengalaman</h4>
+                            <p id="aboutExperience" class="text-gray-600">3+ Tahun</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Email</h4>
+                            <p id="aboutEmail" class="text-gray-600">preneta@email.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Status</h4>
+                            <p id="aboutStatus" class="text-gray-600">Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Keahlian</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Technical Skills</h3>
+                    <div id="skillsList" class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">HTML/CSS</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">JavaScript</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">React</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">UI/UX Design</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Soft Skills</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-3xl mb-2">🎨</div>
+                            <h4 class="font-semibold text-gray-800">Creativity</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-3xl mb-2">🤝</div>
+                            <h4 class="font-semibold text-gray-800">Teamwork</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-3xl mb-2">💡</div>
+                            <h4 class="font-semibold text-gray-800">Problem Solving</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-3xl mb-2">📢</div>
+                            <h4 class="font-semibold text-gray-800">Communication</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Portfolio</h2>
+            <div id="portfolioGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-6xl">
+                        🌐
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-Commerce Website</h3>
+                        <p class="text-gray-600 mb-4">Modern e-commerce platform with responsive design and user-friendly interface.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        </div>
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Lihat Detail →</a>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-white text-6xl">
+                        📱
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile App Design</h3>
+                        <p class="text-gray-600 mb-4">Clean and intuitive mobile app design with focus on user experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                        </div>
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Lihat Detail →</a>
+                    </div>
+                </div>
+                <div class="portfolio-item bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center text-white text-6xl">
+                        💼
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Corporate Website</h3>
+                        <p class="text-gray-600 mb-4">Professional corporate website with modern design and CMS integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">WordPress</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                        </div>
+                        <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Lihat Detail →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Hubungi Saya</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Mari Berkolaborasi!</h3>
+                    <p class="text-gray-600 mb-8">Saya selalu terbuka untuk proyek baru dan kolaborasi yang menarik. Jangan ragu untuk menghubungi saya!</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl">📧</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p id="contactEmail" class="text-gray-600">preneta@email.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl">📱</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Phone</h4>
+                                <p id="contactPhone" class="text-gray-600">+62 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl">📍</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Location</h4>
+                                <p id="contactLocation" class="text-gray-600">Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form id="contactForm" class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Nama</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Pesan</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Preneta Pricylla Permata Ibadani. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black/50 modal z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Admin Login</h2>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-medium mb-2">Username</label>
+                    <input type="text" id="username" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                </div>
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">Login</button>
+                <button type="button" onclick="hideLogin()" class="w-full mt-3 border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition-colors">Batal</button>
+            </form>
+            <div class="mt-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-800">
+                <strong>Demo Credentials:</strong><br>
+                Username: admin<br>
+                Password: admin123
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="hidden fixed inset-0 bg-white z-50 overflow-y-auto">
+        <div class="bg-purple-600 text-white p-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Admin Panel - Portfolio Management</h1>
+                <button onclick="logout()" class="bg-purple-700 px-4 py-2 rounded-lg hover:bg-purple-800 transition-colors">Logout</button>
+            </div>
+        </div>
+
+        <div class="p-6">
+            <!-- Admin Navigation -->
+            <div class="mb-8">
+                <div class="flex space-x-4 border-b">
+                    <button onclick="showAdminSection('profile')" class="admin-tab px-4 py-2 border-b-2 border-purple-600 text-purple-600 font-medium">Profile</button>
+                    <button onclick="showAdminSection('about')" class="admin-tab px-4 py-2 text-gray-600 hover:text-purple-600">About</button>
+                    <button onclick="showAdminSection('skills')" class="admin-tab px-4 py-2 text-gray-600 hover:text-purple-600">Skills</button>
+                    <button onclick="showAdminSection('portfolio')" class="admin-tab px-4 py-2 text-gray-600 hover:text-purple-600">Portfolio</button>
+                    <button onclick="showAdminSection('contact')" class="admin-tab px-4 py-2 text-gray-600 hover:text-purple-600">Contact</button>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="adminProfile" class="admin-section">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Edit Profile</h2>
+                <form id="profileForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Profile Photo</label>
+                        <div class="flex items-center space-x-4">
+                            <div id="profilePreview" class="w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-2xl text-white font-bold">
+                                PP
+                            </div>
+                            <div>
+                                <input type="file" id="profilePhoto" accept="image/*" class="hidden">
+                                <button type="button" onclick="document.getElementById('profilePhoto').click()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">Upload Photo</button>
+                                <button type="button" onclick="removeProfilePhoto()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors ml-2">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
+                        <input type="text" id="editName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="Preneta Pricylla Permata Ibadani">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Title/Posisi</label>
+                        <input type="text" id="editTitle" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="Web Developer & UI/UX Designer">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Deskripsi Hero</label>
+                        <textarea id="editHeroDesc" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">Passionate about creating beautiful and functional digital experiences that make a difference.</textarea>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Background Image</label>
+                        <div class="space-y-2">
+                            <input type="file" id="backgroundImage" accept="image/*" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">
+                            <div id="backgroundPreview" class="w-full h-32 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-500">
+                                Background Preview
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Update Profile</button>
+                </form>
+            </div>
+
+            <!-- About Section -->
+            <div id="adminAbout" class="admin-section hidden">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Edit About Section</h2>
+                <form id="aboutForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">About Image</label>
+                        <div class="flex items-center space-x-4">
+                            <div id="aboutImagePreview" class="w-32 h-32 bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl flex items-center justify-center text-4xl text-purple-600">
+                                👩‍💻
+                            </div>
+                            <div>
+                                <input type="file" id="aboutImage" accept="image/*" class="hidden">
+                                <button type="button" onclick="document.getElementById('aboutImage').click()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">Upload Image</button>
+                                <button type="button" onclick="removeAboutImage()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors ml-2">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">About Title</label>
+                        <input type="text" id="editAboutTitle" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="Hello, I'm Preneta!">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">About Description</label>
+                        <textarea id="editAboutDesc" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">Saya adalah seorang web developer dan UI/UX designer yang berpengalaman dalam menciptakan solusi digital yang inovatif. Dengan passion yang tinggi terhadap teknologi dan desain, saya selalu berusaha memberikan hasil terbaik untuk setiap project.</textarea>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Lokasi</label>
+                            <input type="text" id="editLocation" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="Indonesia">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Pengalaman</label>
+                            <input type="text" id="editExperience" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="3+ Tahun">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="editAboutEmail" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="preneta@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Status</label>
+                            <input type="text" id="editStatus" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="Available">
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Update About</button>
+                </form>
+            </div>
+
+            <!-- Skills Section -->
+            <div id="adminSkills" class="admin-section hidden">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Manage Skills</h2>
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Add New Skill</h3>
+                    <form id="skillForm" class="flex gap-4">
+                        <input type="text" id="skillName" placeholder="Skill Name" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                        <input type="number" id="skillLevel" placeholder="Level %" min="0" max="100" class="w-24 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                        <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Add</button>
+                    </form>
+                </div>
+                <div id="skillsManager" class="space-y-4">
+                    <!-- Skills will be populated here -->
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div id="adminPortfolio" class="admin-section hidden">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Manage Portfolio</h2>
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Add New Project</h3>
+                    <form id="portfolioForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Project Image</label>
+                            <div class="flex items-center space-x-4">
+                                <div id="projectImagePreview" class="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center text-white text-2xl">
+                                    🌐
+                                </div>
+                                <div>
+                                    <input type="file" id="projectImage" accept="image/*" class="hidden">
+                                    <button type="button" onclick="document.getElementById('projectImage').click()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">Upload Image</button>
+                                    <button type="button" onclick="resetProjectImage()" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors ml-2">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Project Title</label>
+                                <input type="text" id="projectTitle" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Icon Emoji (if no image)</label>
+                                <input type="text" id="projectIcon" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="🌐">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Description</label>
+                            <textarea id="projectDesc" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" required></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Technologies (comma separated)</label>
+                            <input type="text" id="projectTech" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="React, Node.js" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Project URL (optional)</label>
+                            <input type="url" id="projectUrl" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="https://example.com">
+                        </div>
+                        <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Add Project</button>
+                    </form>
+                </div>
+                <div id="portfolioManager" class="grid md:grid-cols-2 gap-6">
+                    <!-- Portfolio items will be populated here -->
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="adminContact" class="admin-section hidden">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Edit Contact Information</h2>
+                <form id="contactInfoForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Contact Background Image</label>
+                        <div class="space-y-2">
+                            <input type="file" id="contactBgImage" accept="image/*" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">
+                            <div id="contactBgPreview" class="w-full h-32 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-500">
+                                Contact Background Preview
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Profile CV/Resume</label>
+                        <div class="space-y-2">
+                            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">
+                            <div id="resumePreview" class="text-sm text-gray-600">
+                                Upload your CV/Resume (PDF, DOC, DOCX)
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="editContactEmail" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="preneta@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Phone</label>
+                        <input type="text" id="editContactPhone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="+62 123 456 7890">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Location</label>
+                        <input type="text" id="editContactLocation" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" value="Indonesia">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">LinkedIn URL</label>
+                        <input type="url" id="linkedinUrl" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="https://linkedin.com/in/yourprofile">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">GitHub URL</label>
+                        <input type="url" id="githubUrl" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500" placeholder="https://github.com/yourusername">
+                    </div>
+                    <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Update Contact Info</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data storage
+        let portfolioData = {
+            profile: {
+                name: "Preneta Pricylla Permata Ibadani",
+                title: "Web Developer & UI/UX Designer",
+                heroDescription: "Passionate about creating beautiful and functional digital experiences that make a difference.",
+                profilePhoto: null,
+                backgroundImage: null
+            },
+            about: {
+                title: "Hello, I'm Preneta!",
+                description: "Saya adalah seorang web developer dan UI/UX designer yang berpengalaman dalam menciptakan solusi digital yang inovatif. Dengan passion yang tinggi terhadap teknologi dan desain, saya selalu berusaha memberikan hasil terbaik untuk setiap project.",
+                location: "Indonesia",
+                experience: "3+ Tahun",
+                email: "preneta@email.com",
+                status: "Available",
+                aboutImage: null
+            },
+            skills: [
+                { name: "HTML/CSS", level: 90 },
+                { name: "JavaScript", level: 85 },
+                { name: "React", level: 80 },
+                { name: "UI/UX Design", level: 88 }
+            ],
+            portfolio: [
+                {
+                    id: 1,
+                    title: "E-Commerce Website",
+                    icon: "🌐",
+                    description: "Modern e-commerce platform with responsive design and user-friendly interface.",
+                    technologies: ["React", "Node.js"],
+                    image: null,
+                    url: ""
+                },
+                {
+                    id: 2,
+                    title: "Mobile App Design",
+                    icon: "📱",
+                    description: "Clean and intuitive mobile app design with focus on user experience.",
+                    technologies: ["Figma", "UI/UX"],
+                    image: null,
+                    url: ""
+                },
+                {
+                    id: 3,
+                    title: "Corporate Website",
+                    icon: "💼",
+                    description: "Professional corporate website with modern design and CMS integration.",
+                    technologies: ["WordPress", "PHP"],
+                    image: null,
+                    url: ""
+                }
+            ],
+            contact: {
+                email: "preneta@email.com",
+                phone: "+62 123 456 7890",
+                location: "Indonesia",
+                backgroundImage: null,
+                resume: null,
+                linkedin: "",
+                github: ""
+            }
+        };
+
+        // Authentication
+        function showLogin() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function hideLogin() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function logout() {
+            document.getElementById('adminPanel').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Admin section navigation
+        function showAdminSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.admin-section').forEach(s => s.classList.add('hidden'));
+            // Show selected section
+            document.getElementById('admin' + section.charAt(0).toUpperCase() + section.slice(1)).classList.remove('hidden');
+            
+            // Update tabs
+            document.querySelectorAll('.admin-tab').forEach(tab => {
+                tab.classList.remove('border-purple-600', 'text-purple-600');
+                tab.classList.add('text-gray-600');
+            });
+            event.target.classList.add('border-purple-600', 'text-purple-600');
+            event.target.classList.remove('text-gray-600');
+        }
+
+        // Update skills display
+        function updateSkillsDisplay() {
+            const skillsList = document.getElementById('skillsList');
+            skillsList.innerHTML = '';
+            
+            portfolioData.skills.forEach(skill => {
+                const skillDiv = document.createElement('div');
+                skillDiv.className = 'skill-item';
+                skillDiv.innerHTML = `
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium text-gray-700">${skill.name}</span>
+                        <span class="text-gray-600">${skill.level}%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-3">
+                        <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: ${skill.level}%"></div>
+                    </div>
+                `;
+                skillsList.appendChild(skillDiv);
+            });
+        }
+
+        // Update skills manager
+        function updateSkillsManager() {
+            const manager = document.getElementById('skillsManager');
+            manager.innerHTML = '';
+            
+            portfolioData.skills.forEach((skill, index) => {
+                const skillDiv = document.createElement('div');
+                skillDiv.className = 'flex items-center justify-between bg-gray-50 p-4 rounded-lg';
+                skillDiv.innerHTML = `
+                    <div class="flex-1">
+                        <span class="font-medium">${skill.name}</span>
+                        <span class="text-gray-600 ml-2">(${skill.level}%)</span>
+                    </div>
+                    <button onclick="removeSkill(${index})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition-colors">Remove</button>
+                `;
+                manager.appendChild(skillDiv);
+            });
+        }
+
+        // Update portfolio display
+        function updatePortfolioDisplay() {
+            const grid = document.getElementById('portfolioGrid');
+            grid.innerHTML = '';
+            
+            portfolioData.portfolio.forEach(project => {
+                const colors = ['from-blue-400 to-purple-500', 'from-green-400 to-blue-500', 'from-pink-400 to-red-500', 'from-yellow-400 to-orange-500'];
+                const colorClass = colors[Math.floor(Math.random() * colors.length)];
+                
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'portfolio-item bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow';
+                
+                let imageContent = '';
+                if (project.image) {
+                    imageContent = `<div class="h-48 bg-cover bg-center" style="background-image: url(${project.image})"></div>`;
+                } else {
+                    imageContent = `<div class="h-48 bg-gradient-to-br ${colorClass} flex items-center justify-center text-white text-6xl">${project.icon}</div>`;
+                }
+                
+                const linkHref = project.url ? project.url : '#';
+                const linkTarget = project.url ? 'target="_blank" rel="noopener noreferrer"' : '';
+                
+                projectDiv.innerHTML = `
+                    ${imageContent}
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${project.title}</h3>
+                        <p class="text-gray-600 mb-4">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.technologies.map(tech => `<span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">${tech}</span>`).join('')}
+                        </div>
+                        <a href="${linkHref}" ${linkTarget} class="text-purple-600 hover:text-purple-800 font-medium">${project.url ? 'Visit Project →' : 'Lihat Detail →'}</a>
+                    </div>
+                `;
+                grid.appendChild(projectDiv);
+            });
+        }
+
+        // Update portfolio manager
+        function updatePortfolioManager() {
+            const manager = document.getElementById('portfolioManager');
+            manager.innerHTML = '';
+            
+            portfolioData.portfolio.forEach(project => {
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'bg-gray-50 p-4 rounded-lg';
+                projectDiv.innerHTML = `
+                    <div class="flex items-center justify-between mb-2">
+                        <h4 class="font-semibold">${project.title}</h4>
+                        <button onclick="removeProject(${project.id})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition-colors">Remove</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">${project.description}</p>
+                    <div class="flex flex-wrap gap-1">
+                        ${project.technologies.map(tech => `<span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">${tech}</span>`).join('')}
+                    </div>
+                `;
+                manager.appendChild(projectDiv);
+            });
+        }
+
+        // Remove skill
+        function removeSkill(index) {
+            portfolioData.skills.splice(index, 1);
+            updateSkillsDisplay();
+            updateSkillsManager();
+        }
+
+        // Remove project
+        function removeProject(id) {
+            portfolioData.portfolio = portfolioData.portfolio.filter(p => p.id !== id);
+            updatePortfolioDisplay();
+            updatePortfolioManager();
+        }
+
+        // Image handling functions
+        function handleImageUpload(file, callback) {
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    callback(e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeProfilePhoto() {
+            portfolioData.profile.profilePhoto = null;
+            document.getElementById('profilePreview').innerHTML = 'PP';
+            document.getElementById('profilePreview').style.backgroundImage = '';
+            updateHeroProfileImage();
+        }
+
+        function removeAboutImage() {
+            portfolioData.about.aboutImage = null;
+            document.getElementById('aboutImagePreview').innerHTML = '👩‍💻';
+            document.getElementById('aboutImagePreview').style.backgroundImage = '';
+            updateAboutImage();
+        }
+
+        function resetProjectImage() {
+            document.getElementById('projectImagePreview').innerHTML = '🌐';
+            document.getElementById('projectImagePreview').style.backgroundImage = '';
+        }
+
+        function updateHeroProfileImage() {
+            const heroImage = document.querySelector('#home .w-48.h-48');
+            if (portfolioData.profile.profilePhoto) {
+                heroImage.style.backgroundImage = `url(${portfolioData.profile.profilePhoto})`;
+                heroImage.style.backgroundSize = 'cover';
+                heroImage.style.backgroundPosition = 'center';
+                heroImage.innerHTML = '';
+            } else {
+                heroImage.style.backgroundImage = '';
+                heroImage.innerHTML = 'PP';
+            }
+        }
+
+        function updateAboutImage() {
+            const aboutImage = document.querySelector('#about .w-full.h-96');
+            if (portfolioData.about.aboutImage) {
+                aboutImage.style.backgroundImage = `url(${portfolioData.about.aboutImage})`;
+                aboutImage.style.backgroundSize = 'cover';
+                aboutImage.style.backgroundPosition = 'center';
+                aboutImage.innerHTML = '';
+            } else {
+                aboutImage.style.backgroundImage = '';
+                aboutImage.innerHTML = '👩‍💻';
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Login form
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                if (username === 'admin' && password === 'admin123') {
+                    hideLogin();
+                    document.getElementById('adminPanel').classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                    updateSkillsManager();
+                    updatePortfolioManager();
+                } else {
+                    alert('Username atau password salah!');
+                }
+            });
+
+            // File upload event listeners
+            document.getElementById('profilePhoto').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    handleImageUpload(file, function(dataUrl) {
+                        portfolioData.profile.profilePhoto = dataUrl;
+                        const preview = document.getElementById('profilePreview');
+                        preview.style.backgroundImage = `url(${dataUrl})`;
+                        preview.style.backgroundSize = 'cover';
+                        preview.style.backgroundPosition = 'center';
+                        preview.innerHTML = '';
+                        updateHeroProfileImage();
+                    });
+                }
+            });
+
+            document.getElementById('backgroundImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    handleImageUpload(file, function(dataUrl) {
+                        portfolioData.profile.backgroundImage = dataUrl;
+                        const preview = document.getElementById('backgroundPreview');
+                        preview.style.backgroundImage = `url(${dataUrl})`;
+                        preview.style.backgroundSize = 'cover';
+                        preview.style.backgroundPosition = 'center';
+                        preview.innerHTML = '';
+                    });
+                }
+            });
+
+            document.getElementById('aboutImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    handleImageUpload(file, function(dataUrl) {
+                        portfolioData.about.aboutImage = dataUrl;
+                        const preview = document.getElementById('aboutImagePreview');
+                        preview.style.backgroundImage = `url(${dataUrl})`;
+                        preview.style.backgroundSize = 'cover';
+                        preview.style.backgroundPosition = 'center';
+                        preview.innerHTML = '';
+                        updateAboutImage();
+                    });
+                }
+            });
+
+            document.getElementById('projectImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    handleImageUpload(file, function(dataUrl) {
+                        const preview = document.getElementById('projectImagePreview');
+                        preview.style.backgroundImage = `url(${dataUrl})`;
+                        preview.style.backgroundSize = 'cover';
+                        preview.style.backgroundPosition = 'center';
+                        preview.innerHTML = '';
+                        preview.dataset.image = dataUrl;
+                    });
+                }
+            });
+
+            document.getElementById('contactBgImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    handleImageUpload(file, function(dataUrl) {
+                        portfolioData.contact.backgroundImage = dataUrl;
+                        const preview = document.getElementById('contactBgPreview');
+                        preview.style.backgroundImage = `url(${dataUrl})`;
+                        preview.style.backgroundSize = 'cover';
+                        preview.style.backgroundPosition = 'center';
+                        preview.innerHTML = '';
+                    });
+                }
+            });
+
+            document.getElementById('resumeFile').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        portfolioData.contact.resume = {
+                            name: file.name,
+                            data: e.target.result
+                        };
+                        document.getElementById('resumePreview').innerHTML = `
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-600">✓</span>
+                                <span>Uploaded: ${file.name}</span>
+                                <button onclick="downloadResume()" class="text-purple-600 hover:text-purple-800 underline">Download</button>
+                            </div>
+                        `;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Profile form
+            document.getElementById('profileForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                portfolioData.profile.name = document.getElementById('editName').value;
+                portfolioData.profile.title = document.getElementById('editTitle').value;
+                portfolioData.profile.heroDescription = document.getElementById('editHeroDesc').value;
+                
+                // Update display
+                document.getElementById('heroName').textContent = portfolioData.profile.name;
+                document.getElementById('heroTitle').textContent = portfolioData.profile.title;
+                document.getElementById('heroDescription').textContent = portfolioData.profile.heroDescription;
+                
+                alert('Profile berhasil diupdate!');
+            });
+
+            // About form
+            document.getElementById('aboutForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                portfolioData.about.title = document.getElementById('editAboutTitle').value;
+                portfolioData.about.description = document.getElementById('editAboutDesc').value;
+                portfolioData.about.location = document.getElementById('editLocation').value;
+                portfolioData.about.experience = document.getElementById('editExperience').value;
+                portfolioData.about.email = document.getElementById('editAboutEmail').value;
+                portfolioData.about.status = document.getElementById('editStatus').value;
+                
+                // Update display
+                document.getElementById('aboutTitle').textContent = portfolioData.about.title;
+                document.getElementById('aboutDescription').textContent = portfolioData.about.description;
+                document.getElementById('aboutLocation').textContent = portfolioData.about.location;
+                document.getElementById('aboutExperience').textContent = portfolioData.about.experience;
+                document.getElementById('aboutEmail').textContent = portfolioData.about.email;
+                document.getElementById('aboutStatus').textContent = portfolioData.about.status;
+                
+                alert('About section berhasil diupdate!');
+            });
+
+            // Skills form
+            document.getElementById('skillForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('skillName').value;
+                const level = parseInt(document.getElementById('skillLevel').value);
+                
+                portfolioData.skills.push({ name, level });
+                updateSkillsDisplay();
+                updateSkillsManager();
+                
+                // Reset form
+                document.getElementById('skillName').value = '';
+                document.getElementById('skillLevel').value = '';
+                
+                alert('Skill berhasil ditambahkan!');
+            });
+
+            // Portfolio form
+            document.getElementById('portfolioForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const title = document.getElementById('projectTitle').value;
+                const icon = document.getElementById('projectIcon').value || '🌐';
+                const description = document.getElementById('projectDesc').value;
+                const technologies = document.getElementById('projectTech').value.split(',').map(t => t.trim());
+                const url = document.getElementById('projectUrl').value;
+                const imagePreview = document.getElementById('projectImagePreview');
+                const image = imagePreview.dataset.image || null;
+                
+                const newProject = {
+                    id: Date.now(),
+                    title,
+                    icon,
+                    description,
+                    technologies,
+                    image,
+                    url
+                };
+                
+                portfolioData.portfolio.push(newProject);
+                updatePortfolioDisplay();
+                updatePortfolioManager();
+                
+                // Reset form
+                document.getElementById('portfolioForm').reset();
+                resetProjectImage();
+                delete imagePreview.dataset.image;
+                
+                alert('Project berhasil ditambahkan!');
+            });
+
+            // Contact form
+            document.getElementById('contactInfoForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                portfolioData.contact.email = document.getElementById('editContactEmail').value;
+                portfolioData.contact.phone = document.getElementById('editContactPhone').value;
+                portfolioData.contact.location = document.getElementById('editContactLocation').value;
+                portfolioData.contact.linkedin = document.getElementById('linkedinUrl').value;
+                portfolioData.contact.github = document.getElementById('githubUrl').value;
+                
+                // Update display
+                document.getElementById('contactEmail').textContent = portfolioData.contact.email;
+                document.getElementById('contactPhone').textContent = portfolioData.contact.phone;
+                document.getElementById('contactLocation').textContent = portfolioData.contact.location;
+                
+                alert('Contact info berhasil diupdate!');
+            });
+
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Terima kasih! Pesan Anda telah dikirim. Saya akan segera menghubungi Anda kembali.');
+                this.reset();
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        document.getElementById('mobileMenu').classList.add('hidden');
+                    }
+                });
+            });
+
+            // Download resume function
+            window.downloadResume = function() {
+                if (portfolioData.contact.resume) {
+                    const link = document.createElement('a');
+                    link.href = portfolioData.contact.resume.data;
+                    link.download = portfolioData.contact.resume.name;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            };
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'984ea84b5195ce17',t:'MTc1ODg0NjY3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
